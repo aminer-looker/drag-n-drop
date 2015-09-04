@@ -18,8 +18,15 @@ block content
         grid-example(ng-controller='GridController as controller')
             .controls
                 label row height
-                input#row-height(
+                input(
                     ng-model='controller.gridsterOptions.rowHeight'
+                    ng-model-options='{ updateOn: "blur" }'
+                    ng-keyup='controller.onKeyUp($event)'
+                )
+
+                label column count
+                input(
+                    ng-model='controller.gridsterOptions.columns'
                     ng-model-options='{ updateOn: "blur" }'
                     ng-keyup='controller.onKeyUp($event)'
                 )
