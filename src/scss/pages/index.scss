@@ -1,0 +1,42 @@
+/*
+ * Copyright (C) 2015 by Looker Data Services, Inc.
+ * All rights reserved.
+ */
+
+#index {
+
+    b {
+        font-family: $font-family-control;
+    }
+
+    introduction {
+        display: block;
+        font-family: $font-family-text;
+        font-size: $font-size-x-large;
+        line-height: 1.25em;
+        margin: 2rem auto;
+        width: 66%;
+    }
+
+    options {
+        display: block;
+        font-family: $font-family-text;
+        font-size: $font-size-large;
+        margin: 5rem auto;
+        width: 66%;
+
+        demo {
+            display: block;
+
+            a {
+                font-family: $font-family-control;
+                font-size: $font-size-large;
+            }
+
+            p {
+                font-size: $font-size-medium;
+                margin: 0.5rem 0 0 3rem;
+            }
+        }
+    }
+}

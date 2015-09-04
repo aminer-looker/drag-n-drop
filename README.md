@@ -1,0 +1,1 @@
+This is a sample project to try out various permutations of using [Gridster](http://gridster.net/) and similar frameworks for use in Looker.

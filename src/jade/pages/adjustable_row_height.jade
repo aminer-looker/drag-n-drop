@@ -1,0 +1,48 @@
+//-
+//- Copyright (C) 2015 by Looker Data Services, Inc.
+//- All rights reserved.
+//-
+
+extends ../layouts/basic
+
+block title
+    | Angular Gridster Demo
+
+block content
+
+    #adjustable-row-height
+
+        navigation
+            a(href='/' target='_self') « back to choices
+
+        grid-example(ng-controller='GridController as controller')
+            .controls
+                label row height
+                input#row-height(
+                    ng-model='controller.gridsterOptions.rowHeight'
+                    ng-model-options='{ updateOn: "blur" }'
+                    ng-keyup='controller.onKeyUp($event)'
+                )
+
+            p.
+                Nam consectetur mauris eu lacinia blandit. Pellentesque habitant morbi tristique senectus
+                et netus et malesuada fames ac turpis egestas. Suspendisse in nulla a risus tristique
+                molestie. Duis venenatis facilisis diam, ut sodales lectus tincidunt sit amet. Donec
+                aliquam feugiat urna in mattis. Nullam vitae augue rhoncus, interdum risus vel, sodales
+                sapien. Nulla lacinia nulla velit, ut malesuada lectus accumsan vitae. Pellentesque varius
+                consequat velit, quis pharetra urna pretium eu. Nullam id erat vel magna auctor aliquam.
+                Nam eget turpis sed mauris lobortis ultrices. Donec tempus nunc non felis molestie
+                elementum.
+
+            grid
+                div(gridster='controller.gridsterOptions')
+                    div(ng-repeat='item in controller.items' gridster-item='item')
+                        grid-item(item='item')
+
+            p.
+                Ut quis pretium mauris. Nulla feugiat sapien rutrum leo interdum, gravida hendrerit mauris
+                mollis. Duis sem velit, sodales fermentum lobortis at, ornare sit amet tortor. Proin
+                tincidunt nulla vel risus malesuada, non scelerisque enim vehicula. Maecenas lacinia
+                interdum lacinia. Maecenas sed massa nec arcu convallis mollis in eget ante. Morbi volutpat
+                venenatis placerat. Integer cursus rutrum semper. Nam mattis et tortor a lobortis. Nunc
+                bibendum fringilla auctor.
